@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Game Center | Chess</title>
+
+    <link rel="stylesheet" href="{% static 'css/chess.css' %}">
+</head>
+
+<body>
+
+    <main class="game-container">
+
+        <header class="game-header">
+            <div>
+                <h1>♟ Chess Arena</h1>
+                <p>Challenge your strategic thinking.</p>
+            </div>
+
+            <a href="/" class="back-link">Game Center</a>
+        </header>
+
+        <section class="game-layout">
+
+            <div class="board-section">
+
+                <div class="player-label">
+                    <span>♚</span>
+                    <span>Black</span>
+                    <span id="black-captured" class="captured"></span>
+                </div>
+
+                <div id="chessboard" class="chessboard"></div>
+
+                <div class="player-label">
+                    <span>♔</span>
+                    <span>White</span>
+                    <span id="white-captured" class="captured"></span>
+                </div>
+
+            </div>
+
+            <aside class="game-panel">
+
+                <div class="status-card">
+                    <h2>Game Status</h2>
+                    <p id="game-status">White's turn</p>
+                </div>
+
+                <div class="move-card">
+                    <h2>Move History</h2>
+                    <div id="move-history" class="move-history">
+                        No moves yet.
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="undo-btn">↶ Undo</button>
+                    <button id="redo-btn">↷ Redo</button>
+                    <button id="restart-btn">⟳ Restart</button>
+                </div>
+
+            </aside>
+
+        </section>
+
+        <footer>
+            <p>Game Center | Chess Edition</p>
+        </footer>
+
+    </main>
+
+    <script type="module" src="{% static 'js/games/chess.js' %}"></script>
+
+</body>
+</html>
